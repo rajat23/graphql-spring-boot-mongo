@@ -1,0 +1,31 @@
+buildscript {
+	ext {
+		springBootVersion = '1.5.7.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter-web')
+	compile group: 'com.graphql-java', name: 'graphql-java', version: '3.0.0'
+	compile group: 'com.graphql-java', name: 'graphql-java-tools', version: '3.2.0'
+
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+}
