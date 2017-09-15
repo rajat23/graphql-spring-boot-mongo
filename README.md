@@ -9,14 +9,15 @@ Attempt to use GraphQL java library to build GraphQL server using spring boot.No
 -  Embedded tomcat of spring boot starts using `gradle bootRun` 
 -  Unit tests runs using `gradle clean test`
 
-# Endpoints available :
+
+# Query
 - Fetch all blogs : `http://localhost:8080/graphql` POST Endpoint.
   Request body format :
  `{
 	    "query": "{allBlogs{title}}"
  }`
  
-- It sound little stupid here to fetch all blogs using `POST` http method but it is used so we can pass query as a part of request body.
+- It sounds little stupid here to fetch all blogs using `POST` http method but it is used so we can pass query as a part of request body.
   We can change is to `GET` and pass actual query as query param.
   
 - Resonse that you will get is : 
