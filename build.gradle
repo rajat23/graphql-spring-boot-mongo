@@ -24,6 +24,7 @@ repositories {
 
 dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
+    compile 'org.projectlombok:lombok:1.16.12'
 	compile group: 'com.graphql-java', name: 'graphql-java', version: '3.0.0'
 	compile group: 'com.graphql-java', name: 'graphql-java-tools', version: '3.2.0'
 

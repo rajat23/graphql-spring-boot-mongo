@@ -1,10 +1,10 @@
-type Link {
-  url: String!
-  description: String!
+type Blog {
+  title: String!
+  content: String!
 }
 
 type Query {
-  allLinks: [Link]
+  allBlogs: [Blog]
 }
 
 schema {
