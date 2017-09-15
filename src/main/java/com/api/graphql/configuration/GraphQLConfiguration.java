@@ -1,7 +1,7 @@
 package com.api.graphql.configuration;
 
 
-import com.api.graphql.Query.Query;
+import com.api.graphql.query.Query;
 import com.api.graphql.repository.BlogRepository;
 import graphql.GraphQL;
 import graphql.schema.GraphQLSchema;

@@ -1,4 +1,4 @@
-package com.api.graphql.Query;
+package com.api.graphql.query;
 
 import com.api.graphql.model.Blog;
 import com.api.graphql.repository.BlogRepository;
