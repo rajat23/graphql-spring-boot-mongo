@@ -21,7 +21,7 @@ public class GraphQLController {
 
     @RequestMapping(value = "/graphql",method = RequestMethod.POST)
     public Object handle(@RequestBody Map<String,String> query) {
-        return graphQLService.fetchData(query);
+        return graphQLService.resolve(query);
     }
 
 }

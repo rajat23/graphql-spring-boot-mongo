@@ -17,7 +17,7 @@ public class GraphQLService {
         this.graphQL = graphQL;
     }
 
-    public Object fetchData(Map<String,String> query) {
+    public Object resolve(Map<String,String> query) {
         ExecutionResult executionResult = graphQL.execute(query.get("query"));
         return executionResult.getData();
     }
