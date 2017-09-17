@@ -50,5 +50,38 @@ Attempt to use GraphQL java library to build GraphQL server using spring boot.No
         }
     ]
 }`
+
+# Mutation aka POST
+
+- GraphQL provides feature of Mutation which let us create new enitity.
+
+- Create Blog: `http:/localhost:8080/graphql`.
+  Request Body: `{
+                 	"query": "mutation createBlog {createBlog(title:\"hello\",content:\"world\") {title content}}"
+                 }`
+- Response: `{
+                 "createBlog": {
+                     "title": "hello",
+                     "content": "world"
+                 }
+             }`
+             
+             
+- If you now again Query all blogs response would be `{
+                                                          "allBlogs": [
+                                                              {
+                                                                  "title": "REST in peace.GraphQL live long",
+                                                                  "content": "GraphQL dominating now days"
+                                                              },
+                                                              {
+                                                                  "title": "Kotlin for Android",
+                                                                  "content": "how useful is kotlin for android dev"
+                                                              },
+                                                              {
+                                                                  "title": "hello",
+                                                                  "content": "world"
+                                                              }
+                                                          ]
+                                                      }`
  
   
