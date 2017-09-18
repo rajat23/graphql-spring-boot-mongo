@@ -22,11 +22,6 @@ public class GraphQLConfiguration {
     private Mutation mutation;
 
     @Bean
-    public BlogRepository blogRepository(){
-        return new BlogRepository();
-    }
-
-    @Bean
     public GraphQL graphQL() {
         return GraphQL.newGraphQL(graphQLSchema())
                 .build();

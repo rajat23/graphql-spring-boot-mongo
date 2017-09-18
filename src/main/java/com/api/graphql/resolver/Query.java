@@ -19,6 +19,6 @@ public class Query implements GraphQLRootResolver {
     }
 
     public List<Blog> allBlogs() {
-        return blogRepository.getAllBlogs();
+        return blogRepository.findAll();
     }
 }

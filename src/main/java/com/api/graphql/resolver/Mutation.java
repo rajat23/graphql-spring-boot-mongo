@@ -18,7 +18,7 @@ public class Mutation implements GraphQLRootResolver {
 
     public Blog createBlog(String title, String content) {
         Blog blog = new Blog(title,content);
-        blogRepository.saveBlog(blog);
+        blogRepository.save(blog);
         return blog;
     }
 }
