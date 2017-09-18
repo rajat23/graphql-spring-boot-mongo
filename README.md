@@ -1,14 +1,15 @@
 # GraphQL-spring-boot
-Attempt to use GraphQL java library to build GraphQL server using spring boot.No external persistence layer used so far,all data is in memory.
+Attempt to use GraphQL java library to build GraphQL server using spring boot.MongoDB is used as a storage.
 
 # Schema for GraphQL (SDL)
  - `resources/schema.graphqls` contains GraphQL schema defination for query,resolver and types
 
 # Application Initialization
 
--  Embedded tomcat of spring boot starts using `gradle bootRun` 
 -  Unit tests runs using `gradle clean test`
-
+-  Make sure you have mongo installed on your machine.App will connect on port `27017` by default.
+-  Start mongoDB using `mongo` command.
+-  Embedded tomcat of spring boot starts using `gradle bootRun` 
 
 # Query
 - Fetch all blogs : `http://localhost:8080/graphql` POST Endpoint.
@@ -83,5 +84,7 @@ Attempt to use GraphQL java library to build GraphQL server using spring boot.No
                                                               }
                                                           ]
                                                       }`
+                                                      
+
  
   
